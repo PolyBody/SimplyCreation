@@ -17,7 +17,11 @@ h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-h
 .rule{width:56px;height:1px;background:var(--line);animation:grow .9s var(--ease) .6s both}
 .text{color:#cfcfcf;animation:fadeUp .9s var(--ease) .7s both}
 .text + .text{margin-top:-8px}
-.facts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fadeUp .9s var(--ease) .9s both}
+.founder{display:flex;align-items:center;gap:14px;text-align:left;border:1px solid var(--line);border-radius:999px;padding:8px 24px 8px 8px;animation:fadeUp .9s var(--ease) .85s both}
+.ava{width:64px;height:64px;border-radius:50%;object-fit:cover;border:1px solid #444;flex:none}
+.founder b{display:block;font-size:1.05rem;line-height:1.2}
+.founder span{font-size:.78rem;color:var(--dim);letter-spacing:.14em;text-transform:uppercase}
+.facts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fadeUp .9s var(--ease) 1s both}
 .fact{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.88rem;color:var(--dim)}
 @keyframes logoIn{from{opacity:0;transform:scale(.7) rotate(-6deg);filter:blur(10px)}to{opacity:1;transform:none}}
 @keyframes float{50%{transform:translateY(-10px)}}
@@ -34,6 +38,10 @@ h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-h
   <div class="rule" aria-hidden="true"></div>
   <p class="text">Мы делаем небольшие, но цепляющие игры для ПК и Android. Простое управление, понятный мир и внимание к каждой детали.</p>
   <p class="text">Студия небольшая, поэтому каждое решение принимаем сами и быстро. Ваши отзывы влияют на то, что мы делаем дальше.</p>
+  <div class="founder">
+    <img class="ava" src="polybody.jpg" alt="Аватар PolyBody" width="64" height="64">
+    <div><b>PolyBody</b><span>Основатель</span></div>
+  </div>
   <div class="facts">
     <span class="fact">ПК · Android</span>
     <span class="fact">Игры без лишнего</span>
