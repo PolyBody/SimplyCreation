@@ -23,6 +23,18 @@ h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-h
 .founder span{font-size:.78rem;color:var(--dim);letter-spacing:.14em;text-transform:uppercase}
 .facts{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;animation:fadeUp .9s var(--ease) 1s both}
 .fact{border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.88rem;color:var(--dim)}
+.games{width:100%;display:flex;flex-direction:column;gap:14px;animation:fadeUp .9s var(--ease) 1.15s both}
+.label{font-size:.78rem;letter-spacing:.32em;text-transform:uppercase;color:var(--dim)}
+.game{display:flex;align-items:center;gap:18px;text-align:left;border:1px solid var(--line);border-radius:22px;padding:14px;background:#0b0b0b;transition:border-color .3s,transform .3s var(--ease)}
+.game:hover{border-color:#555;transform:translateY(-3px)}
+.game img{width:92px;height:92px;border-radius:16px;object-fit:cover;border:1px solid var(--line);flex:none}
+.game .info{flex:1;min-width:0}
+.game h3{font-size:1.25rem;line-height:1.2}
+.game p{color:var(--dim);font-size:.88rem}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:999px;background:var(--fg);color:#000;text-decoration:none;font-weight:700;font-size:.92rem;white-space:nowrap;transition:background .25s,transform .25s var(--ease)}
+.btn:hover{background:#d9d9d9;transform:translateY(-2px)}
+.btn:focus-visible{outline:2px solid var(--fg);outline-offset:3px}
+@media (max-width:520px){.game{flex-wrap:wrap}.game .btn{width:100%;justify-content:center}}
 @keyframes logoIn{from{opacity:0;transform:scale(.7) rotate(-6deg);filter:blur(10px)}to{opacity:1;transform:none}}
 @keyframes float{50%{transform:translateY(-10px)}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
@@ -46,6 +58,14 @@ h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-h
     <span class="fact">ПК · Android</span>
     <span class="fact">Игры без лишнего</span>
   </div>
+  <section class="games" aria-label="Игры">
+    <p class="label">Игры</p>
+    <article class="game">
+      <img src="murzikbox.jpg" alt="Логотип игры MurzikBOX" width="92" height="92">
+      <div class="info"><h3>MurzikBOX</h3><p>Версия 1.01 · ZIP-архив</p></div>
+      <a class="btn" href="https://github.com/PolyBody/MurzikBOX/releases/download/MB/MB1.01.zip" rel="noopener">Скачать</a>
+    </article>
+  </section>
 </main>
 </body>
 </html>
